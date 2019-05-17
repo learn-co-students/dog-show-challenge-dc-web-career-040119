@@ -83,7 +83,8 @@ const haircut = (e) => {
                 })
             })
                 .then(response => response.json())
-                .then(updatePrettyPup);
+                .then(updatePrettyPup)
+                .catch(error => alert(error.message));
 
             e.target.style.display = 'none';
             e.target.previousElementSibling.style.display = 'none';
